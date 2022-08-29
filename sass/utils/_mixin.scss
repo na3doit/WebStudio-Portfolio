@@ -1,0 +1,18 @@
+@mixin font($fw, $fs, $lh, $ls, $c) 
+{   
+    font-weight: $fw; 
+    font-size: $fs; 
+    line-height: $lh; 
+    letter-spacing: $ls;
+    color: $c; 
+}
+@mixin list($d, $fd, $fw, $g) {
+    display: $d; 
+    flex-direction: $fd; 
+    flex-wrap: $fw;
+    gap: $g;
+}
+
+@mixin item($qgap, $g, $qitem ) {
+    flex-basis: calc((100% - #{$qgap} * #{$g}) / $qitem);
+}
