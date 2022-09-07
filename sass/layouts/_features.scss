@@ -1,18 +1,17 @@
 .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     @media screen and (min-width: 1200px) {
       flex-wrap: nowrap;
+      gap: 30px;
     }
-   
   }
+
   .features-item {
-    
     max-width: 100%;
-    @media screen and (min-width: 768px) {
-      width: 354px;
-      // !!!!!!!!!!!!!!!!!!!!!!!!!11111111 ----  ошибка
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc(50% - 30px);
+      margin-right: 30px;
       margin-bottom: 57px;
       }
    
@@ -25,15 +24,12 @@
     align-items: center;
     border-radius: 4px;
     background-color: var(--icon-bg-color);
-    
-    
     @media screen and (min-width: 1200px) {
-        margin-bottom: 55px;
+       margin-bottom: 55px;
     }
   }
   
   .features-hedline {
-    
     margin-bottom: 10px;
     text-align: center;
     text-transform: uppercase;
