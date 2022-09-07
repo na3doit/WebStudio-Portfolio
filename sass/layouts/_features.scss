@@ -1,29 +1,51 @@
 .features-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
+   
   }
   .features-item {
-    max-width: 270px;
+    
+    max-width: 100%;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      // !!!!!!!!!!!!!!!!!!!!!!!!!11111111 ----  ошибка
+      margin-bottom: 57px;
+      }
+   
   }
   .features-thumb {
-    margin-bottom: 30px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
     height: 120px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
     background-color: var(--icon-bg-color);
+    
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 55px;
+    }
   }
   
   .features-hedline {
+    
     margin-bottom: 10px;
+    text-align: center;
     text-transform: uppercase;
     @include font(700, 14px, 1.14, 00.03em, var(--title-text-color));
+    @include tablet {
+    text-align: inherit;
+ }
   }
   
   .features-text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    
   }
