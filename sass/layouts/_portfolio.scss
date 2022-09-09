@@ -44,6 +44,7 @@
     height: 100%;
     top: 0;
     left: 0;
+    overflow-y: scroll;
     padding: 63px 24px;
     @include font( 400, 18px, 1.56, .03em, var(--white-color));
     background-color: rgba(33, 150, 243, 0.9);

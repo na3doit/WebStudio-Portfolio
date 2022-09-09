@@ -1,6 +1,9 @@
 .features-list {
-    display: flex;
+    display: block;
+    @media screen and (min-width: 768px) {
+      display: flex;
     flex-wrap: wrap;
+    }
     @media screen and (min-width: 1200px) {
       flex-wrap: nowrap;
       gap: 30px;
@@ -14,6 +17,12 @@
       margin-right: 30px;
       margin-bottom: 57px;
       }
+      &:not(:first-child) { 
+        @media screen and (max-width: 480px) {
+          margin-top: 30px;
+        }
+      }
+      
    
   }
   .features-thumb {
@@ -24,9 +33,6 @@
     align-items: center;
     border-radius: 4px;
     background-color: var(--icon-bg-color);
-    @media screen and (min-width: 1200px) {
-       margin-bottom: 55px;
-    }
   }
   
   .features-hedline {

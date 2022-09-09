@@ -13,9 +13,11 @@
 .work-list {
   display: flex;
   gap: 30px;
-  position: relative;
 }
 
+.work-item {
+  position: relative;
+}
 .work-text {
   position: absolute;
   bottom: 0;

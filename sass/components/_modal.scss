@@ -195,20 +195,23 @@
   }
   
 .user-policy__agree {
-  display: flex;
+  display: inline-block;
   align-items: center;
   font-size: 12px;
   line-height: 1.16;
   @media screen and (min-width: 1200px) {
     font-size: 14px;
+    display: flex;
   }
 }
 
   .form-terms-link {
-  
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.16;
     text-decoration-line: underline;
     
-    @include font(null, 12px, 1.16, null,  var(--accent-text-color));
+    @include font(null, 12px, 1.16, null,  var(--accent-text-color) );
     @media screen and (min-width: 1200px) {
       font-size: 14px;
     }

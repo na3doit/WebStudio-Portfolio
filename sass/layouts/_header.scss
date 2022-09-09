@@ -30,7 +30,7 @@
     color: var(--accent-text-color);
     position: relative;
   }
-  
+
   .navigation__link--current::after {
     content: '';
     position: absolute;
@@ -42,7 +42,7 @@
     background: var(--accent-text-color);
   }
   
-  .contacts {
+.contacts {
     margin-left: auto;
     @media screen and (max-width: 767.5px) {
       display: none;
@@ -57,8 +57,7 @@
     }
   }
  
-  
- .contacts__link {
+.contacts__link {
     display: flex; 
     align-items: center;
     @include font(500, 14px, 1.14, 0.02em, var(--primery-text-color));
@@ -68,20 +67,31 @@
       color: var(--accent-text-color);
       fill: currentColor;
     }
+    @media screen and(min-width: 1200px) {
+      padding-bottom: 32px;
+      padding-top: 32px;
+    }
   }
-  
-  .contacts__icon {
+.contacts__link-mail {
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+      padding-top: 20px;
+ }
+}
+   
+.contacts__icon {
     margin-right: 10px;
     vertical-align: middle;
     fill: currentColor;
   }
-  .contacsts__item:last-child {
+   
+.contacsts__item:last-child {
     @media screen and (min-width: 767px) and (max-width: 1199px) {
       margin-top: 10px;
+      padding-bottom: 20px;
  }
     }
     
-    .menu__btn--open {
+.menu__btn--open {
       margin-left: auto;
       border: none;
       background-color: inherit;
@@ -94,8 +104,17 @@
         display: none;
       }
     }
+    
+.mob-menu.visually-hidden {
+  opacity: 0;
+  pointer-events: none;
+  & .mob-container {
+    transform: translate(-50%, -50%) scale(0) rotate(-40deg);
+  }
+ 
+}
 
-    .mob-container {
+.mob-container {
       display: flex;
       flex-direction: column;  
       position: fixed;
@@ -111,6 +130,8 @@
       @media screen and (min-width: 767.5px) {
         display: none;
       }
+     
+      transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
       }
     
     .menu__btn--close {
@@ -132,6 +153,7 @@
 
     .mob-menu__link {
       @include font (500, 40px, 1.17, 0.02em, var(--title-text-color));
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       &:hover,
       &:focus 
       { color: var(--accent-text-color); }   
@@ -173,8 +195,13 @@
 }
 .mob-soc__list {
   display: flex;
- 
+  flex-wrap: wrap;
+  @media screen and (max-width: 424px) {
+    max-width: 320px;
   }
+  
+  }
+
   .mob-soc__item {
    padding-left: 10px;
    padding-right: 10px;
@@ -185,17 +212,20 @@
     }
     &:last-child {
       border-right: none;
+      padding-right: 0;
+     
+    } 
+    @media screen and(max-width: 424px) {
+      &:last-child {
+        padding-left: 0;
+      } 
     }
-    
   }
   
 .mob-soc__link {
-  @include font (500, 12px, 1.22, 0.02em, var(--accent-text-color));
+  @include font (500, 18px, 1.22, 0.02em, var(--accent-text-color));
   transition: color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
   &:hover, &:focus {
     color: inherit;
-  }
-  @media screen and (min-width: 400px) {
-    font-size: 18px;
   }
 }
