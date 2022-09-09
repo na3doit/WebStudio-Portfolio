@@ -254,13 +254,13 @@ ul {
   }
 }
 
-.mob-menu.visually-hidden {
+.mob-menu.is-open {
   opacity: 0;
   pointer-events: none;
 }
-.mob-menu.visually-hidden .mob-container {
-  -webkit-transform: translate(-50%, -50%) scale(0) rotate(-40deg);
-          transform: translate(-50%, -50%) scale(0) rotate(-40deg);
+.mob-menu.is-open .mob-container {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .mob-container {
@@ -281,10 +281,16 @@ ul {
   padding-bottom: 48px;
   padding-left: 40px;
   background-color: var(--white-color);
-  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 850ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 767.5px) {
   .mob-container {
