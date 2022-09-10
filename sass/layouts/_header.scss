@@ -77,6 +77,11 @@
       padding-top: 20px;
  }
 }
+.contacts__link-phone {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    padding-bottom: 20px;
+}
+}
    
 .contacts__icon {
     margin-right: 10px;
@@ -87,7 +92,7 @@
 .contacsts__item:last-child {
     @media screen and (min-width: 767px) and (max-width: 1199px) {
       margin-top: 10px;
-      padding-bottom: 20px;
+     
  }
     }
     

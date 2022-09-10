@@ -225,6 +225,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .contacts__link-phone {
+    padding-bottom: 20px;
+  }
+}
+
 .contacts__icon {
   margin-right: 10px;
   vertical-align: middle;
@@ -234,7 +240,6 @@ ul {
 @media screen and (min-width: 767px) and (max-width: 1199px) {
   .contacsts__item:last-child {
     margin-top: 10px;
-    padding-bottom: 20px;
   }
 }
 
@@ -739,13 +744,17 @@ ul {
 }
 
 .team-title {
-  margin-bottom: 30px;
   text-align: center;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 768px) {
+  .team-title {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .team-title {
@@ -781,7 +790,11 @@ ul {
 .team-item {
   background-color: var(--white-color);
   text-align: center;
-  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .team-item {
+    margin-top: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team-item {

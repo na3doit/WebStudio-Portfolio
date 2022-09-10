@@ -3,7 +3,9 @@
   }
 
   .team-title {
-    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
     text-align: center;
    @include font(700, 28px, 1.17, 0.03em, var(--title-text-color));
    @media screen and (min-width: 1200px) {
@@ -27,7 +29,10 @@
   .team-item {
     background-color: var(--white-color);
     text-align: center;
-    margin: 0 auto;
+    // margin: 0 auto;
+    @media screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
     @media screen and (min-width: 768px) {
       width: calc((100% - 30px) / 2)
     }
